@@ -30,12 +30,30 @@ void solve(int num[],int size){
     } 
     return; 
 } 
+bool findTarget(int arr[],int size,int target){
+    //traverse the enitre array.
+    for(int i=0;i<size;i++){
+        if(arr[i]==target){
+            //found
+            return true;
+        }
+    }
+    //If you reached to the last line you did not found the target
+    return false;
+}
 int main(){
-    int arr[4]={0};
+    int arr[4]={10,20,30,40};
     int size=4;
+    int target=30;
     solve(arr,size);
+    int ans=findTarget(arr,size,target);
+    cout<<"ans:"<<ans<<endl;
     for(int i=0;i<size;i++)
     {
         cout<<arr[i]<<" ";
     }
 }
+
+
+
+
